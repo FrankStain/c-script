@@ -1,0 +1,7 @@
+theory/
+trunc/
+*.~*
+*.dcu
+*.dof
+*.dcp
+*.exe

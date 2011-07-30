@@ -1,0 +1,35 @@
+int iWalker = 0;
+int iPower = 2;
+int iResult = 0;
+int iStart = 2;
+
+int CycleTest(){
+  while(iStart < 25){
+    iResult = iResult + iStart * iPower;
+    iStart = iStart + iPower;
+  };
+  return iStart;
+};
+
+bool LogicTest(){
+  if(iStart > iPower){
+    iPower = 10;
+    iStart = 2;
+  }else{
+    if(iPower = 2){
+      iPower = 4;
+    };
+    iStart = 4;
+  };
+};
+
+echo("Test out some string");
+echo("variables: iPower = ", iPower, "; iStart = ", iStart, "; iResult = ", iResult, ";");
+
+CycleTest();
+
+echo("After cycleTest() variables: iPower = ", iPower, "; iStart = ", iStart, "; iResult = ", iResult, ";");
+
+LogicTest();
+
+echo("After LogicTest() variables: iPower = ", iPower, "; iStart = ", iStart, "; iResult = ", iResult, ";");

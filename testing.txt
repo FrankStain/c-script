@@ -1,0 +1,81 @@
+echo("Start full test for cscript...");
+
+echo("Defining vars - ");
+int iVar1 = 10;
+float fVar2 = 12.5;
+int iVar3;
+
+echo("iVar1 == ", iVar1, "; fVar2 == ", fVar2, "; iVar3 == ", iVar3);
+
+echo("");
+echo("Testing FOR cycle (four steps) - ");
+int iWalker;
+for(iWalker = 0; iWalker < 4; iWalker = iWalker + 1){
+  echo("   in FOR, step #", iWalker);
+};
+echo("End FOR cycle.");
+
+echo("");
+echo("Testing WHILE cycle (four steps) - ");
+iVar3 = 0;
+while(iVar3 < 4){
+  echo("   in WHILE, step #", iVar3 + 1);
+  iVar3 = iVar3 + 1;
+};
+echo("End WHILE cycle.");
+
+echo("");
+echo("Testing DO-WHILE cycle (four steps) - ");
+iVar3 = 0;
+do{
+  echo("   in DO-WHILE, step #", iVar3 + 1);
+}while(4 > iVar3 = iVar3 + 1);
+echo("End DO-WHILE cycle.");
+
+echo("");
+echo("Hire is some function declaration...");
+int TestFunction(int iVar1, int iVar2){
+  echo("   In test function, input prm's: ", iVar1, ", ", iVar2);
+  return 1;
+  echo("   Inside function also... This text must not be displayed!");
+};
+echo("TestFunction declaration complited. See something between? Me don't too... O__o");
+
+echo("");
+echo("Calling this function, lats see (input: 3, iVar1) - ");
+TestFunction(3, iVar1);
+echo("Test function calling comlited.");
+
+echo("");
+echo("Testing IF expression (must pass to) - ");
+if(true){
+  echo("   Into IF expression. Passed successful.");
+};
+echo("Testing IF-ELSE expression (must pass to ELSE-block) - ");
+if(false){
+  echo("   passed to IF block.");
+}else{
+  echo("   Passed to ELSE block.");
+};
+echo("Comlited.");
+
+echo("");
+echo("Test some math operators");
+echo("11 == (2 * 5 - 3) + 4 == ", (2 * 5 - 3) + 4);
+echo("25 == 5 * (3 + 2) == ", 5 * (3 + 2));
+echo("16 == 64 / 8 * 2 == ", 64 / 8 * 2);
+echo("2.25 == 4.5 / 2 == ", 4.5 / 2);
+echo("2 == 8 % 6 == ", 8 % 6);
+echo("5 > 6 == ", 5 > 6);
+echo("6 > 2 == ", 6 > 2);
+echo("5 >= 5 == ", 5 >= 5);
+echo("7 != 8 == ", 7 != 8);
+echo("4 == 4 == ", 4 == 4);
+echo("true & true == ", true & true);
+echo("true & false == ", true & false);
+echo("true | false == ", true | false);
+echo("true ^ false == ", true ^ false);
+echo("!true == ", !true);
+
+echo("");
+echo("All tests complited.");
